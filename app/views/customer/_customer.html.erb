@@ -1,0 +1,28 @@
+<div class="column is-one-third">
+  <% if customer.image.present? %>
+    <div class="card-image">
+      <figure class="image is-4by3">
+        <%= image_tag customer.image %>
+      </figure>
+    </div>
+  <% end %>
+  <div class="card customer">
+    <div class="card-content">
+    <p class="title is-4">
+      <% if name_is_link %>
+        <%= link_to customer.full_name, customer %>
+      <% else %>
+        <%= customer.full_name%>
+      <% end %>
+    </p>
+    <ul>
+      <li>
+        <strong>Phone Number:</strong> <%= customer.phone_number %>
+      </li>
+      <li>
+        <strong>Email Address: </strong> <%= customer.email_address %>
+      </li>
+    </ul>
+    </div>
+  </div>
+</div>
