@@ -4,7 +4,7 @@ class CustomerController < ApplicationController
   end
 
   def alphabetized
-    @customers = Customer.order(:name)
+    @customers = Customer.order(:full_name)
   end
 
   def missing_email

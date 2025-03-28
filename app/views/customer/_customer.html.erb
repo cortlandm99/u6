@@ -1,5 +1,5 @@
 <div class="column is-one-third">
-  <% if customer.image.present? %>
+  <% if customer.present? && customer.image.present? %>
     <div class="card-image">
       <figure class="image is-4by3">
         <%= image_tag customer.image %>
@@ -12,7 +12,7 @@
       <% if name_is_link %>
         <%= link_to customer.full_name, customer %>
       <% else %>
-        <%= customer.full_name%>
+        <%= customer.full_name %>
       <% end %>
     </p>
     <ul>
